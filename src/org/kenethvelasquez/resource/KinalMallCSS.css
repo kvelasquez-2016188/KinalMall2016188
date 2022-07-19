@@ -1,0 +1,18 @@
+.menu-bar{
+  -fx-background-color: #50526B;
+  -fx-border-color:  #E67E22;
+ -fx-border-width: 3
+
+}
+
+.menu:hover{
+    -fx-background-color: #BFC9CA;
+}
+.menu-bar .label {
+    -fx-font-size: 18 pt;
+    -fx-font-family: "Bell MT";
+    -fx-text-fill: black;
+}
+.menu-item .label{
+    fx-color: black;
+}

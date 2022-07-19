@@ -1,0 +1,41 @@
+.button1{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.button1:hover{
+    -fx-background-color: #808B96;
+    -fx-background-radius: 0 0 0 0;
+
+}
+.button1:pressed{
+    -fx-background-color: #F6DDCC;
+    -fx-background-radius: 0 0 0 0;
+
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler{
+    -fx-cell-size: 20;
+    -fx-background-color: #F0B27A;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: black;
+    -fx-font-weigth:bold;
+    -fx-alignment: CENTER;
+}
+
+.table-view .cell{
+    -fx-cell-size: 30;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: #7F8C8D;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: rgb(229, 152, 102);
+}
+
+.table-row-cell:selected .text{
+    -fx-fill: black;
+}

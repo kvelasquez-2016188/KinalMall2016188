@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ClienteReporte" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20eca6b6-cd19-4974-b362-d13090d279b1">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codCliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * From Clientes C inner join Locales L on C.codigoLocal= L.codigoLocal
+inner join CuentasPorCobrar CPC on CPC.codigoCliente = C.codigoCliente
+inner join TipoCliente TC on TC.codigoTipoCliente = C.codigoTipoCliente
+where C.codigoCliente = $P{codCliente};]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mesesPendientes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disponibilidad" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorLocal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorAdministrativo" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCuentasPorCobrar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoFactura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="anio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorNetoPago" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="802" height="555" uuid="4bd511bc-b3f9-44a9-b8c6-420d9dcd86ce"/>
+				<imageExpression><![CDATA["C:\\Users\\kenet\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2016188\\src\\org\\kenethvelasquez\\images\\fondoReporteria802x555.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="290" y="0" width="212" height="79" backcolor="#CCCCCC" uuid="c1708e58-9681-481a-847b-eca757c5a5ce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="28"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="539" y="0" width="79" height="79" uuid="39b61b77-6280-4f98-9f56-9838a717d244"/>
+				<imageExpression><![CDATA["C:\\Users\\kenet\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2016188\\src\\org\\kenethvelasquez\\images\\empleadosIcono.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="196" y="0" width="244" height="35" uuid="8c80e222-3055-4020-b05d-607ebf234222"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="15"/>
+				</textElement>
+				<text><![CDATA[Nombres y Apellidos del Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="124" height="35" uuid="bdc3df39-afe2-4924-8cf0-d2b5e9844743"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="15"/>
+				</textElement>
+				<text><![CDATA[Código Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="124" y="0" width="72" height="35" uuid="9fafce99-b267-4196-95da-dad9d3403e0e"/>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="69" height="20" uuid="62fa4b28-e7bd-4bf7-857a-0c3ac431a04f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="20" width="100" height="20" uuid="c66f3ec9-c49b-4731-933c-3e57a6b2eecd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="20" width="100" height="20" uuid="f456fd71-73c6-460c-9be3-073368f1a573"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="20" width="109" height="20" uuid="8c168ae9-7f32-4339-a96d-ad0d5c2714c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="20" width="89" height="20" uuid="5b835a27-2aa4-49aa-9bfa-1338bde3c6c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Saldo a Favor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="20" width="100" height="20" uuid="0cff7d7a-250f-4179-9046-0a409c1796fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Saldo en Contra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="567" y="20" width="73" height="20" uuid="d115ffb7-4a7e-4230-9e6e-ef75b8c44ceb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[No. Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="9" width="100" height="31" uuid="e1440078-434d-4dbe-99ff-df2c6c2d3089"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor Neto del Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="9" width="62" height="31" uuid="5049b5be-b0b2-4ebe-a675-9de7e0f9e963"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Estado de Pago]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="28" width="802" height="1" uuid="28a91fcd-2f26-4595-b85b-7565ac6c42ef"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#666666"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="518" y="34" width="284" height="20" uuid="a90eb0ce-ca3a-4b9f-9d7d-104a6a1c19a3"/>
+				<textElement>
+					<font fontName="Candara" size="13"/>
+				</textElement>
+				<text><![CDATA[Keneth Abraham Velásquez Batz, 2016188 IN5AM]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

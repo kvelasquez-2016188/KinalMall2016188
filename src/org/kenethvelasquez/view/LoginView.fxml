@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="600.0" style="-fx-background-color: #95A5A6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kenethvelasquez.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="431.0" prefWidth="300.0" style="-fx-background-color: #E59866;">
+         <children>
+            <ImageView fitHeight="198.0" fitWidth="266.0" layoutX="18.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/KinalMallLogo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="351.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/username.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="351.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/contrasena.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="416.0" layoutY="292.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-color: #F5B7B1;" text="Ingresar" />
+      <TextField fx:id="txtUsuario" alignment="CENTER" layoutX="400.0" layoutY="188.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #F5B7B1; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="414.0" layoutY="150.0" text="Login">
+         <font>
+            <Font name="Perpetua Titling MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="388.0" layoutY="380.0" onMouseClicked="#ventanaUsuario" text="Regístrese aquí...">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Hyperlink>
+      <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="400.0" layoutY="243.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #F5B7B1; -fx-border-width: 0px 0px 2px 0px;" />
+   </children>
+</AnchorPane>

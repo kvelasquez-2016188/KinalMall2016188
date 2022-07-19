@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTipoCliente" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ba0c4b8-94f6-4239-8c36-d4bb4063f919">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="244"/>
+	<parameter name="descrip" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM TipoCliente TC INNER JOIN Clientes C ON
+	TC.codigoTipoCliente = C.codigoTipoCliente
+	WHERE TC.descripcion =$P{descrip};]]>
+	</queryString>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="752" height="572" uuid="20fdb79c-4af0-4a56-8611-1ea2749a8ea8"/>
+				<imageExpression><![CDATA["C:\\Users\\kenet\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2016188\\src\\org\\kenethvelasquez\\images\\fondoReporte.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<image>
+				<reportElement x="28" y="3" width="561" height="76" uuid="3fdd7b8f-5eb4-4803-91c6-5f5725eba359"/>
+				<imageExpression><![CDATA["C:\\Users\\kenet\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2016188\\src\\org\\kenethvelasquez\\images\\tipoClientesIcono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="28" y="79" width="100" height="20" uuid="284e5a79-c1a6-4ef9-90ff-4aab0ec32b78"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Tipo Cliente]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="26" uuid="223b1eec-7eac-4bd0-bb04-185002bb8771"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="26" uuid="92959eed-76f2-45bc-b1c6-5743f8397241"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="737" height="33" backcolor="#E59866" uuid="ffc630bc-80b1-4f8e-baa7-e2b00bdd8cc9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="652" y="0" width="85" height="33" uuid="c68d09c8-7e9c-4248-96aa-81b20db76c7e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Cod. Tipo Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="0" width="62" height="33" uuid="d1731a50-3002-4885-944a-4e211152326c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cod. Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="100" height="33" uuid="d737d570-a4e7-486c-9020-f1fb4b5d2362"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombres Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="88" height="33" uuid="3033f615-df8b-4b70-9ad5-1712f379d6a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Apellidos Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="100" height="33" uuid="106e885e-e88c-4bae-9d71-08c40a6f1c91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Telefono Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="0" width="100" height="33" uuid="49fb00d2-65f3-46b4-9c0f-f77549399a42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Direccion Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="0" width="120" height="33" uuid="e6300cd7-e977-46a4-8202-6dfea85c0f1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="0" width="54" height="33" uuid="6304c3f5-eded-40a8-84fa-16a77ef5990f"/>
+				<text><![CDATA[Cod. Local]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="173" splitType="Stretch">
+			<textField>
+				<reportElement x="652" y="7" width="85" height="20" uuid="a94be7f5-f93c-4dd4-8281-74011952023a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoTipoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="7" width="62" height="20" uuid="0ffdd8e1-fcfa-4ad2-b13e-7687bf6e620d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="7" width="100" height="20" uuid="4abc0ba5-54d2-429b-b9b4-6010ab4173a9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombresCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="7" width="88" height="20" uuid="e0fd7fa2-1a8e-45e7-9f5b-bb9b864e35f3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellidosCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="7" width="100" height="20" uuid="434da5fa-895a-44b3-993d-bc1b80220153"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="7" width="100" height="20" uuid="cd351456-3926-4090-af5f-50ba2f283143"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccionCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="478" y="7" width="120" height="20" uuid="8cd4fadf-ba26-4253-a302-071593412812"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="598" y="7" width="54" height="20" uuid="aaae4351-99f1-47f1-b8cf-26b5dc4023f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoLocal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="37" width="737" height="1" uuid="4b74fe87-ae0e-446c-b576-437b6ed62ba5"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#E17444"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="589" y="0" width="163" height="20" uuid="9d325cb4-b3c8-473a-a687-7bb75083a28e"/>
+				<text><![CDATA[Keneth Abraham,Velásquez Batz]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
